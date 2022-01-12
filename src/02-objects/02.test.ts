@@ -1,4 +1,4 @@
-import { LocalCityType, GovermentBuildingType } from './02';
+import { LocalCityType, GovernmentBuildingType } from './02_objects';
 
 let city: LocalCityType;
 
@@ -19,7 +19,7 @@ beforeEach(() => {
                 address: { number: 101, street: { title: 'Happy street' } }
             }
         ],
-        govermentBuildings: [
+        governmentBuildings: [
             {
                 type: 'HOSPITAL',
                 budget: 200000,
@@ -64,15 +64,15 @@ test('test city should contains 3 houses', () => {
 })
 
 test('test city should contains hospital and fire station', () => {
-    expect(city.govermentBuildings.length).toBe(2);
+    expect(city.governmentBuildings.length).toBe(2);
 
-    expect(city.govermentBuildings[0].type).toBe('HOSPITAL');
-    expect(city.govermentBuildings[0].budget).toBe(200000);
-    expect(city.govermentBuildings[0].staffCount).toBe(200);
-    expect(city.govermentBuildings[0].address.street.title).toBe('Central Str');
+    expect(city.governmentBuildings[0].type).toBe('HOSPITAL');
+    expect(city.governmentBuildings[0].budget).toBe(200000);
+    expect(city.governmentBuildings[0].staffCount).toBe(200);
+    expect(city.governmentBuildings[0].address.street.title).toBe('Central Str');
 
-    expect(city.govermentBuildings[1].type).toBe('FIRE STATION');
-    expect(city.govermentBuildings[1].budget).toBe(500000);
-    expect(city.govermentBuildings[1].staffCount).toBe(1000);
-    expect(city.govermentBuildings[1].address.street.title).toBe('South Str');
+    expect(city.governmentBuildings[1].type).toBe('FIRE STATION');
+    expect(city.governmentBuildings[1].budget).toBe(500000);
+    expect(city.governmentBuildings[1].staffCount).toBe(1000);
+    expect(city.governmentBuildings[1].address.street.title).toBe('South Str');
 })

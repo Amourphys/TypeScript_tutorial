@@ -2,11 +2,13 @@ import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
+import {User} from "./06-callback/06_callback";
 
 function App() {
     console.log('rendered App')
   return (
     <div className="App">
+        <User/>
         <PageTitle title={'This is APP component'}/>
         Article 1
         <Rating value={3}/>
