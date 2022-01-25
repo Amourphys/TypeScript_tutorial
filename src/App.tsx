@@ -7,6 +7,10 @@ import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
 import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 import ControlledOnOff from "./components/OnOff/ControlledOnOff";
+import UncontrolledInput from './components/Input/UncontrolledInput';
+import ControlledInput from './components/Input/ControlledInput';
+import ControlledCheckbox from './components/Input/ControlledCheckbox';
+import ControlledSelect from './components/Input/ControlledSelect';
 
 function App() {
     console.log('rendered App')
@@ -29,8 +33,13 @@ function App() {
         Article 3
         <ControlledOnOff on={switchOn} onChange={(on) => {setSwitchOn(on)}}/>
         <UncontrolledOnOff onChange={setSwitchOn}/>{switchOn.toString()}
-        {/*<UncontrolledOnOff />*/}
-    </div>
+        
+        Article 4
+        <UncontrolledInput/>
+        <ControlledInput />
+        <ControlledCheckbox />
+        <ControlledSelect />    
+        </div>
   );
 }
 
